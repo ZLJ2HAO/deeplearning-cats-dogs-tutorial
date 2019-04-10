@@ -11,7 +11,7 @@ layer {
   bottom: "data"
   top: "conv1"
   convolution_param {
-    num_output: 96
+    num_output: 72
     kernel_size: 11
     stride: 4
   }
@@ -50,7 +50,7 @@ layer {
   bottom: "norm1"
   top: "conv2"
   convolution_param {
-    num_output: 256
+    num_output: 192
     pad: 2
     kernel_size: 5
     group: 2
@@ -90,7 +90,7 @@ layer {
   bottom: "norm2"
   top: "conv3"
   convolution_param {
-    num_output: 384
+    num_output: 288
     pad: 1
     kernel_size: 3
   }
@@ -107,7 +107,7 @@ layer {
   bottom: "conv3"
   top: "conv4"
   convolution_param {
-    num_output: 384
+    num_output: 288
     pad: 1
     kernel_size: 3
     group: 2
@@ -125,7 +125,7 @@ layer {
   bottom: "conv4"
   top: "conv5"
   convolution_param {
-    num_output: 256
+    num_output: 192
     pad: 1
     kernel_size: 3
     group: 2
@@ -154,7 +154,7 @@ layer {
   bottom: "pool5"
   top: "fc6"
   inner_product_param {
-    num_output: 4096
+    num_output: 3072
   }
 }
 layer {
@@ -178,7 +178,7 @@ layer {
   bottom: "fc6"
   top: "fc7"
   inner_product_param {
-    num_output: 4096
+    num_output: 3072
   }
 }
 layer {
